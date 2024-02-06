@@ -3,12 +3,17 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="max-w-[1400px] mx-auto px-4">
-      <span>Home layout </span>
-      <div>
+    <div className="">
+      <h1 className="mb-4">This is Home Layout </h1>
+      <ul>
         {" "}
-        <Link href="/login">Login</Link>
-      </div>
+        <li className="pb-4">
+          <Link href="/login">Login</Link>
+        </li>
+        <li className="pb-4">
+          <Link href="/blog">Blog</Link>
+        </li>
+      </ul>
     </div>
   );
 }

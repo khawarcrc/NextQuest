@@ -1,8 +1,10 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
-export default function Layout({ children }) {
+interface LayoutProps {
+  children?: React.ReactNode;
+}
+export default function Layout({ children }: LayoutProps) {
   const pathName = usePathname();
   console.log("pathName", pathName);
   return (
@@ -23,7 +25,7 @@ export default function Layout({ children }) {
         </div>
       </div>
       {pathName !== "/login" ? (
-        <div>
+        <div className="flex justify-center items-center gap-[15px] mb-[24px]">
           {" "}
           <Link href={"/"}>go to home</Link>
         </div>
