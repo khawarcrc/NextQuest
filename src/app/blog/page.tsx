@@ -44,7 +44,7 @@ const page = () => {
       <ul>
         {blogs.map((item, index) => (
           <li key={index} className="pb-4">
-            <Link href={`/blog/${item.route}`}>{item.name}</Link>
+            <Link href={`/blog/${item.route}/${item.id}`}>{item.name}</Link>
           </li>
         ))}
       </ul>
