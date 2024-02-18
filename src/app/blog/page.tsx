@@ -1,5 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+
 const blogs = [
   { id: 1, name: "Getting Started with React", route: "react-start" },
   { id: 2, name: "Building a RESTful API with Express", route: "api-express" },
@@ -41,13 +43,21 @@ const page = () => {
   return (
     <div className="">
       <h1 className="mb-8">This is Blog Page</h1>
-      <ul>
+      <ul className="pb-12">
         {blogs.map((item, index) => (
           <li key={index} className="pb-4">
             <Link href={`/blog/${item.route}/${item.id}`}>{item.name}</Link>
           </li>
         ))}
       </ul>
+      <div className="pb-4">
+        <Image
+          src="/DynamicNestedRoutes/dynamic-nested-routes.png"
+          alt="Description of the image"
+          width={805}
+          height={497}
+        />
+      </div>
     </div>
   );
 };
